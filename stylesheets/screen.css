@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/* @import "compass/reset"; */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20);
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+  }
+}
+@keyframes menuMinimize {
+  100% {
+    width: 55px;
+    height: 34px;
+    font-size: 0.6em;
+  }
+}
+/* line 128, ../sass/screen.scss */
+body {
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+/* line 135, ../sass/screen.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 139, ../sass/screen.scss */
+p {
+  font-size: 0.7em;
+}
+
+/* line 143, ../sass/screen.scss */
+a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+/* line 147, ../sass/screen.scss */
+a:hover {
+  cursor: pointer;
+}
+
+/* line 152, ../sass/screen.scss */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 157, ../sass/screen.scss */
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 165, ../sass/screen.scss */
+header #title {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 80px 0px 50px;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+}
+/* line 170, ../sass/screen.scss */
+header #title h1 {
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+/* line 175, ../sass/screen.scss */
+header #title .pronunciation {
+  margin-top: 0px;
+  font-size: 0.5em;
+}
+/* line 180, ../sass/screen.scss */
+header #title article {
+  margin-top: 50px;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 1.5s;
+}
+/* line 185, ../sass/screen.scss */
+header #title.menu-selected {
+  animation-name: fadeOutUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+  -webkit-animation-name: fadeOutUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+}
+/* line 190, ../sass/screen.scss */
+header #menu-box {
+  border-collapse: separate;
+  border-spacing: 8px 8px;
+}
+/* line 196, ../sass/screen.scss */
+header #menu-box .cell {
+  display: table-cell;
+  width: 110px;
+  height: 68px;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  transition: background-color 0.2s, color 0.5s;
+}
+/* line 209, ../sass/screen.scss */
+header #menu-box .cell:hover {
+  cursor: pointer;
+}
+/* line 214, ../sass/screen.scss */
+header #menu-box .cell.n1 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+}
+/* line 214, ../sass/screen.scss */
+header #menu-box .cell.n2 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2.2s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 2.2s;
+}
+/* line 214, ../sass/screen.scss */
+header #menu-box .cell.n3 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2.4s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 2.4s;
+}
+/* line 214, ../sass/screen.scss */
+header #menu-box .cell.n4 {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2.6s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 2.6s;
+}
+/* line 219, ../sass/screen.scss */
+header #menu-box .cell.menu-selected {
+  animation-name: menuMinimize;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+  -webkit-animation-name: menuMinimize;
+  -webkit-animation-duration: 1ns;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+}
+/* line 225, ../sass/screen.scss */
+header #menu-box #n1:checked ~ label .n1 {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: background-color 0.2s, color 0.5s;
+}
+/* line 225, ../sass/screen.scss */
+header #menu-box #n2:checked ~ label .n2 {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: background-color 0.2s, color 0.5s;
+}
+/* line 225, ../sass/screen.scss */
+header #menu-box #n3:checked ~ label .n3 {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: background-color 0.2s, color 0.5s;
+}
+/* line 225, ../sass/screen.scss */
+header #menu-box #n4:checked ~ label .n4 {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: background-color 0.2s, color 0.5s;
+}
+
+/* line 234, ../sass/screen.scss */
+.content {
+  margin: 0 10px;
+  width: auto;
+  display: none;
+}
+/* line 239, ../sass/screen.scss */
+.content.menu-selected {
+  display: block;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+}
+
+/* line 246, ../sass/screen.scss */
+#image-box {
+  text-align: center;
+  width: 100%;
+}
+/* line 250, ../sass/screen.scss */
+#image-box .cell {
+  display: inline-block;
+}
+/* line 253, ../sass/screen.scss */
+#image-box .cell label img {
+  width: 100px;
+}
+/* line 257, ../sass/screen.scss */
+#image-box .cell .caption {
+  margin: 0px;
+  height: 15px;
+  width: 100px;
+}
+
+/* line 265, ../sass/screen.scss */
+#sound-box {
+  text-align: center;
+  width: 100%;
+}
+/* line 269, ../sass/screen.scss */
+#sound-box .cell {
+  margin-top: 3px;
+  display: inline-block;
+}
+
+/* line 275, ../sass/screen.scss */
+footer {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 2.8s;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 2.8s;
+  font-size: 0.7em;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  z-index: -999;
+}
+
+/* line 287, ../sass/screen.scss */
+.modal-trigger {
+  cursor: pointer;
+}
+/* line 291, ../sass/screen.scss */
+.modal-overlay {
+  background: #000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  text-arign: center;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.65, -0.55, 0.265, 1.55);
+  z-index: -999;
+}
+/* line 304, ../sass/screen.scss */
+.modal-wrap {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+/* line 309, ../sass/screen.scss */
+.modal-wrap img {
+  width: 100%;
+}
+/* line 313, ../sass/screen.scss */
+.modal-wrap label {
+  background: rgba(255, 255, 255, 0.8);
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+/* line 328, ../sass/screen.scss */
+input#detail-img0:checked ~ .modal-overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 999;
+}
+
+/* line 328, ../sass/screen.scss */
+input#detail-img1:checked ~ .modal-overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 999;
+}
+
+/* line 328, ../sass/screen.scss */
+input#detail-img2:checked ~ .modal-overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 999;
+}
+
+/* line 328, ../sass/screen.scss */
+input#detail-img3:checked ~ .modal-overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 999;
+}

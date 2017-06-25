@@ -1,0 +1,11 @@
+{
+  "lang": "ja",
+  "name": "phigasui.com",
+  "short_name": "phigasui",
+  "icons": [{
+    "src": "/images/phigasui.png",
+    "size": "144x144",
+    "type": "image/png"
+  }],
+  "display": "standalone"
+}

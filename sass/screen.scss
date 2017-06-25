@@ -1,0 +1,333 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/* @import "compass/reset"; */
+@import "compass/css3";
+
+$base-text-color: rgba(255, 255, 255, 0.8);
+$base-ground-color: rgba(0, 0, 0, 1);
+
+$cellNum: 4;
+$imgNum: 4;
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20);
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+  }
+}
+
+@keyframes menuMinimize {
+  0% {
+  }
+  100% {
+    width: 55px;
+    height: 34px;
+    font-size: 0.6em;
+  }
+}
+
+@mixin fadeInUp($delay: 0s) {
+  animation: {
+    name: fadeInUp;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+  -webkit-animation: {
+    name: fadeInUp;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+}
+
+@mixin fadeOutUp($delay: 0s) {
+  animation: {
+    name: fadeOutUp;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+  -webkit-animation: {
+    name: fadeOutUp;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+}
+
+@mixin fadeOut($delay: 0s) {
+  animation: {
+    name: fadeOut;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+  -webkit-animation: {
+    name: fadeOut;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+}
+
+@mixin menuMinimize($delay: 0s) {
+  animation: {
+    name: menuMinimize;
+    duration: 1s;
+    fill-mode: both;
+    delay: $delay;
+  }
+  -webkit-animation: {
+    name: menuMinimize;
+    duration: 1ns;
+    fill-mode: both;
+    delay: $delay;
+  }
+}
+
+body {
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: $base-ground-color;
+  color: $base-text-color;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 0.7em;
+}
+
+a {
+  color: $base-text-color;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+
+  #title {
+    color: $base-text-color;
+    padding: 80px 0px 50px;
+    @include fadeInUp(1s);
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0px;
+    }
+
+    .pronunciation {
+      margin-top: 0px;
+      font-size: 0.5em;
+    }
+
+    article {
+      margin-top: 50px;
+      @include fadeInUp(1.5s);
+    }
+
+    &.menu-selected {
+      @include fadeOutUp();
+    }
+  }
+
+  #menu-box {
+    border: {
+      collapse: separate;
+      spacing: 8px 8px;
+    }
+
+    .cell {
+      display: table-cell;
+      width: 110px;
+      height: 68px;
+      vertical-align: middle;
+      border: {
+        style: solid;
+        width: 1.5px;
+        color: $base-text-color;
+        radius: 3px;
+      }
+      transition: background-color 0.2s, color 0.5s;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @for $i from 1 through $cellNum {
+        &.n#{$i} {
+          @include fadeInUp(2+(($i - 1)*2/10)+s);
+        }
+      }
+
+      &.menu-selected {
+        @include menuMinimize();
+      }
+    }
+
+    @for $i from 1 through $cellNum {
+      #n#{$i}:checked ~ label .n#{$i} {
+        background: $base-text-color;
+        color: $base-ground-color;
+        transition: background-color 0.2s, color 0.5s;
+      }
+    }
+  }
+}
+
+.content {
+  margin: 0 10px;
+  width: auto;
+  display: none;
+
+  &.menu-selected {
+    display: block;
+    @include fadeInUp();
+  }
+
+}
+
+#image-box {
+  text-align: center;
+  width: 100%;
+
+  .cell {
+    display: inline-block;
+
+    label img {
+      width: 100px;
+    }
+
+    .caption {
+      margin: 0px;
+      height: 15px;
+      width: 100px;
+    }
+  }
+}
+
+#sound-box {
+  text-align: center;
+  width: 100%;
+
+  .cell {
+    margin-top: 3px;
+    display: inline-block;
+  }
+}
+
+footer {
+  @include fadeInUp(2+(($cellNum)*2/10)+s);
+  font-size: 0.7em;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  z-index: -999;
+}
+
+
+.modal {
+  &-trigger {
+    cursor: pointer;
+  }
+
+  &-overlay {
+    background: #000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-arign: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.75s cubic-bezier(0.65, -0.55, 0.265, 1.55);
+    z-index: -999;
+  }
+
+  &-wrap {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+
+    label {
+      background: $base-text-color;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #000;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+@for $i from 0 through $imgNum - 1 {
+  input#detail-img#{$i}:checked ~ .modal-overlay {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 999;
+  }
+}
