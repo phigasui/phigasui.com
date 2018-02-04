@@ -51,6 +51,10 @@
         </article>
       </div>
       <nav id="menu-box">
+        <input id="n1" class="trigger" type="radio" name="menu" data-target="abstract" hidden>
+        <input id="n2" class="trigger" type="radio" name="menu" data-target="sounds" hidden>
+        <input id="n3" class="trigger" type="radio" name="menu" data-target="gallery" hidden>
+        <input id="n4" class="trigger" type="radio" name="menu" data-target="accounts" hidden>
         <label for="n1"><span class="cell n1">ABSTRACT</span></label>
         <label for="n2"><span class="cell n2">SOUNDS</span></label>
         <label for="n3"><span class="cell n3">GALLERY</span></label>
@@ -58,11 +62,6 @@
       </nav>
 
     </header>
-
-    <input id="n1" class="trigger" type="radio" name="menu" data-target="abstract" hidden>
-    <input id="n2" class="trigger" type="radio" name="menu" data-target="sounds" hidden>
-    <input id="n3" class="trigger" type="radio" name="menu" data-target="gallery" hidden>
-    <input id="n4" class="trigger" type="radio" name="menu" data-target="accounts" hidden>
 
     <div id="abstract" class="content">
       <h1>ABSTRACT</h1>
@@ -155,6 +154,20 @@
             <img src="images/variety/hagesui.png">
           </label>
           <p class="caption">hagesui</p>
+        </li>
+
+        <li class="cell">
+          <input id="detail-img4" type="checkbox" hidden>
+          <div class="modal-overlay">
+            <div class="modal-wrap">
+              <label for="detail-img4">×</label>
+              <img src="images/variety/ramengasui.png">
+            </div>
+          </div>
+          <label class="modal-trigger" for="detail-img4">
+            <img src="images/variety/ramengasui.png">
+          </label>
+          <p class="caption">ramengesui</p>
         </li>
       </ul>
     </div>
