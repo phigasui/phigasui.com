@@ -13,6 +13,7 @@ $base-ground-color: rgba(0, 0, 0, 1);
 
 $cellNum: 7; /* menu num */
 $imgNum: 6;  /* variety image num */
+$goodsNum: 2;
 
 @keyframes fadeInUp {
   0% {
@@ -243,7 +244,7 @@ header {
 
 }
 
-#image-box {
+.image-box {
   text-align: center;
   width: 100%;
 
@@ -324,10 +325,22 @@ footer {
   }
 }
 
-@for $i from 0 through $imgNum - 1 {
-  input#detail-img#{$i}:checked ~ .modal-overlay {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 999;
+#gallery {
+  @for $i from 0 through $imgNum - 1 {
+    input#detail-img#{$i}:checked ~ .modal-overlay {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 999;
+    }
+  }
+}
+
+#goods {
+  @for $i from 100 through $imgNum + 100 - 1 {
+    input#detail-img#{$i}:checked ~ .modal-overlay {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 999;
+    }
   }
 }
