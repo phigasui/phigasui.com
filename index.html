@@ -52,18 +52,18 @@
       </div>
       <nav id="menu-box">
         <input id="n1" class="trigger" type="radio" name="menu" data-target="abstract" hidden>
-        <input id="n2" class="trigger" type="radio" name="menu" data-target="sounds" hidden>
-        <input id="n3" class="trigger" type="radio" name="menu" data-target="gallery" hidden>
-        <input id="n4" class="trigger" type="radio" name="menu" data-target="accounts" hidden>
-        <input id="n5" class="trigger" type="radio" name="menu" data-target="blogs" hidden>
-        <input id="n6" class="trigger" type="radio" name="menu" data-target="greeds" hidden>
+        <input id="n2" class="trigger" type="radio" name="menu" data-target="goods" hidden>
+        <input id="n3" class="trigger" type="radio" name="menu" data-target="sounds" hidden>
+        <input id="n4" class="trigger" type="radio" name="menu" data-target="gallery" hidden>
+        <input id="n5" class="trigger" type="radio" name="menu" data-target="accounts" hidden>
+        <input id="n6" class="trigger" type="radio" name="menu" data-target="blogs" hidden>
         <input id="n7" class="trigger" type="radio" name="menu" data-target="gears" hidden>
         <label for="n1"><span class="cell n1">ABSTRACT</span></label>
-        <label for="n2"><span class="cell n2">SOUNDS</span></label>
-        <label for="n3"><span class="cell n3">GALLERY</span></label>
-        <label for="n4"><span class="cell n4">ACCOUNTS</span></label>
-        <label for="n5"><span class="cell n5">BLOGS</span></label>
-        <label for="n6"><span class="cell n6">GREEDS</span></label>
+        <label for="n2"><span class="cell n2">GOODS</span></label>
+        <label for="n3"><span class="cell n3">SOUNDS</span></label>
+        <label for="n4"><span class="cell n4">GALLERY</span></label>
+        <label for="n5"><span class="cell n5">ACCOUNTS</span></label>
+        <label for="n6"><span class="cell n6">BLOGS</span></label>
         <label for="n7"><span class="cell n7">GEARS</span></label>
       </nav>
 
@@ -89,6 +89,52 @@
       </article>
     </div>
 
+    <div id="goods" class="content">
+      <h1>GOODS</h1>
+
+      <p>欲しい方はTwitter等で連絡ください。パーカーは2500yen。手作りステッカーはfreeで配ってます。</p>
+      <p>
+        パーカーはまとめて発注を行っているため、お渡しまでお時間頂きますが、生地素材(値段変動あり)、生地カラー、印字カラーのご希望にもお応可能です。
+        お気軽にご相談下さい。
+      </p>
+
+      <ul class="image-box">
+        <li class="cell">
+          <input id="detail-img100" type="checkbox" hidden>
+          <div class="modal-overlay">
+            <div class="modal-wrap">
+              <label for="detail-img100">×</label>
+              <img src="images/goods/parker.png">
+            </div>
+          </div>
+          <label class="modal-trigger" for="detail-img100">
+            <img src="images/goods/parker.png">
+          </label>
+          <p class="caption">parker(¥2,500)</p>
+        </li>
+
+        <li class="cell">
+          <input id="detail-img101" type="checkbox" hidden>
+          <div class="modal-overlay">
+            <div class="modal-wrap">
+              <label for="detail-img101">×</label>
+              <img src="images/goods/sticker.png">
+            </div>
+          </div>
+          <label class="modal-trigger" for="detail-img101">
+            <img src="images/goods/sticker.png">
+          </label>
+          <p class="caption">sticker(¥0)</p>
+        </li>
+      </ul>
+
+      <p>
+        その他、SUZURIでもアイテムを販売しております。
+        <a href="https://suzuri.jp/phigasui" target="_blank">https://suzuri.jp/phigasui</a>
+      </p>
+
+    </div>
+
     <div id="sounds" class="content">
       <h1>SOUNDS</h1>
       <ul id="sound-box">
@@ -106,7 +152,7 @@
 
     <div id="gallery" class="content">
       <h1>GALLERY</h1>
-      <ul id="image-box">
+      <ul class="image-box">
         <li class="cell">
           <input id="detail-img0" type="checkbox" hidden>
           <div class="modal-overlay">
