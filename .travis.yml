@@ -8,8 +8,8 @@ script:
 
 jobs:
   include:
-    - stage: test
-      if: branch != master
+    - stage: staging
+      if: branch = staging
       deploy:
         provider: firebase
         project: test-phigasuicom
