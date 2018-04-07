@@ -9,12 +9,15 @@ script:
 jobs:
   include:
     - stage: test
+      if: branch != master
       deploy:
         provider: firebase
         project: test-phigasuicom
         token:
           secure: Rih2EqsTEvD50HtAW5y79aQbb977BVtN5Fz8E3DI2Wkls/4B2t6HPE9ONh7tszNixYsGDnQzEr4XwYseL4vQM7AHLKnUcXE5pThrdZCtLcutHswMEeiP45aAATY4QnTp7U6J+83XHPTEcbJ1GGIEsNHfRsd3hPdSeRgoXen8fSEZ2jlp6qErI9OV/3xFkVrk8X0Zt/+ensBBnpc32LNIQCNUqMr0hzBH9mfppnViM2njuF0bHo6teibNK0ujYymPpE69Dq4pKTJYjzcC1OL6jGQ9OrBflyZwjg6sXQDpX+cPPQoxXmjst4lwITkHS+F0sd+qP9FQANZvnvIC/xPq08Q2Wvjtg60h4sbZYlkTDkZh0n1meRz3Ig1ee/qirG2f1/lWarE/4xo0bXcs4EiCHi2V0uUbauf9mvu1SdjulzdKF8WcOJ/upPZ9qnHqjFojRFtRY/sNbphPOIpgu4On5cd9Yjx+/OYAkKK9+FMt943N5X23mfNICg1cZoDZfN2EJ6RfYCw87M9FG6m8BoiOTjme4SL/CBZWkXGzRYL0k12ho2KEPv9juxaxnrpqTQ+W/RTv8DkflmahHLLJhpPNSxS4oLwoTZIAs6hDEqOKCkH5tl5eBvlmpkLckZRqp4oLkwI9j0XBJwoofa2ZromNdf8vF6ephDpf7/LnPCyETC0=
-        all_branches: true
+        on:
+          all_branches: true
+
     - stage: deploy
       if: branch = master
       deploy:
