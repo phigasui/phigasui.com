@@ -3,7 +3,8 @@ node_js:
 - 9.8.0
 install:
 - npm install -g firebase-tools
-script: []
+script:
+- echo Deploying...
 branches:
   only:
   - master
