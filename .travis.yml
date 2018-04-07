@@ -1,22 +1,20 @@
 language: node_js
 node_js:
-  - 9.8.0
-
+- 9.8.0
 install:
-  - npm install firebase-tools
-
+- npm install firebase-tools
 script:
-  - echo Deploy...
-
+- echo Deploy...
 branches:
   only:
-    - master
-
+  - master
 deploy:
   provider: firebase
-  token:
-    secure: Doal3o/5A1JRAY0Pzp6ZsMg4wuJGWENCVTMtMEbite7jjD06lxA6tJRbcNkxx5+L+LIVvMGXctmGoAyLfRUEkztI3mAVw5sXOxRo7v0d5wCKd2bd08beDFiPoQpAIzdY+INPrGxziAz+pF0Vfl80CpMMsgokpPbw2mJx8Yy6I3r3aAQ7d5XTFpo56QpN+eHv9PXe370NLLAaE+ugWb/sJJLAr4Q2ZRj0/5a6Numz8FrpzV0yDg5Pnb4PXSm7zJQAMn3qU12ZgOp9UOT70Y0ecWW6VmebDRrf77mu5FxLZlerDa9m9Om1S+UOitS386jt0qu5PJCXkFOX96eeu6/DqrrP42vzrg8OCM9WzYeMswT54uLqcdAsYMjoK3+ptcrOJ6O6zh/dZOkdeWabkBd8P6F16Z9J4XanV/fjjKrAH6u76fMhOPMtODRcjUQFkkvOCS0rUKDL++7GHgCfzEc0eEC2pTeJRUcjeGEnymVvzImHh/+Dqk8RrcZ4fEMw35UEAX9y4iukipfKomQ/dHEqE6olZ9UhZHcmTBNFARA7LaMZdCGN+v5ylJckKWUWXSqSPMljjQwSpssYUWk10YiYchgMUSVX5aHQOI5nKtd3qii8HeCpFXg/X/N1Kd1gWlQdCxPOKMNxw/FyevrH772KBFBBsl++rzZf1hXvhxJ/rE4=
-  project: "phigasuicom"
+  project: phigasuicom
+
+env:
+  global:
+    secure: Yn7cHY8csRWyhcSzI32AzjOhuEEneloOlhD4YVYiXnxVZNuiy9AvIkYi9i7lYQ2L7HQuHHw8HZNyld3AySg3RSC2Jm197J4wSV0D7L6y7vex7ZUtpUgWEvNrIgInnP6jk6xQFJ9ZfrrUj3//uNv0kT8wESKyLEXdc2+tz69nbi3ZOMhVSnsdQoUwGXzyIkMYSNzGeF2raHAdoDdZR8TeKkSUq3RjlRu/lNitJI7pNQ0ZN/lntbIO1RXDSJJ4uFZTZ0uWbFXKxHhUuIUiFzt4ORe+9JvOQWDLgsh8AQuz/RqRoyeLvvtTpdUn+2VnP3lXJsplPyDziSG7tBSLdu6sPdn1RU0VckYZlD3bqlcElHuq7FetHMo0/MsZAim9vjCBGgJMLwnrRQl5BSA4n4MnHJvpx88vOwb1NCnbMaAksnehrOcz2Rsw2CLgay9DLJ1YiUqGHFGxGwJSYzKLNp5T6g9zXFvMdsvOjqJwvlwqRtN6/mZ9G/7c/sEs0Fylq031m+4MaPgxh/5SP+ZN+iQQJUKt+NjPCchcejm7hOWLuCD3Ss5LH82YfQLy3hUzZXpbeOe9H3Sfjo7SkSM0HWQ6GCFHgSBNMCyhC9ggrkUPCYjIviu/QcpFp988iWxOA4+XzZf5n4uWkS/jmRgt0Ezb0duk/1phEZoFKQ6T1x9YdKE=
 
 after_success:
-  - firebase deploy
+  - firebase deploy --token $secure
