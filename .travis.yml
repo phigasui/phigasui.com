@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - 9.8.0
+install:
+  "npm install firebase-tools"
+script:
+  "echo Deploy..."
 branches:
   only:
     - master
