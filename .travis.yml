@@ -5,11 +5,23 @@ install:
 - npm install -g firebase-tools
 script:
 - echo Deploying...
-branches:
-  only:
-  - master
-deploy:
-  provider: firebase
-  project: phigasuicom
-  token:
-    secure: Yn7cHY8csRWyhcSzI32AzjOhuEEneloOlhD4YVYiXnxVZNuiy9AvIkYi9i7lYQ2L7HQuHHw8HZNyld3AySg3RSC2Jm197J4wSV0D7L6y7vex7ZUtpUgWEvNrIgInnP6jk6xQFJ9ZfrrUj3//uNv0kT8wESKyLEXdc2+tz69nbi3ZOMhVSnsdQoUwGXzyIkMYSNzGeF2raHAdoDdZR8TeKkSUq3RjlRu/lNitJI7pNQ0ZN/lntbIO1RXDSJJ4uFZTZ0uWbFXKxHhUuIUiFzt4ORe+9JvOQWDLgsh8AQuz/RqRoyeLvvtTpdUn+2VnP3lXJsplPyDziSG7tBSLdu6sPdn1RU0VckYZlD3bqlcElHuq7FetHMo0/MsZAim9vjCBGgJMLwnrRQl5BSA4n4MnHJvpx88vOwb1NCnbMaAksnehrOcz2Rsw2CLgay9DLJ1YiUqGHFGxGwJSYzKLNp5T6g9zXFvMdsvOjqJwvlwqRtN6/mZ9G/7c/sEs0Fylq031m+4MaPgxh/5SP+ZN+iQQJUKt+NjPCchcejm7hOWLuCD3Ss5LH82YfQLy3hUzZXpbeOe9H3Sfjo7SkSM0HWQ6GCFHgSBNMCyhC9ggrkUPCYjIviu/QcpFp988iWxOA4+XzZf5n4uWkS/jmRgt0Ezb0duk/1phEZoFKQ6T1x9YdKE=
+
+jobs:
+  include:
+    - stage: test
+      if: branch != master
+      deploy:
+        provider: firebase
+        project: test-phigasuicom
+        token:
+          secure: Rih2EqsTEvD50HtAW5y79aQbb977BVtN5Fz8E3DI2Wkls/4B2t6HPE9ONh7tszNixYsGDnQzEr4XwYseL4vQM7AHLKnUcXE5pThrdZCtLcutHswMEeiP45aAATY4QnTp7U6J+83XHPTEcbJ1GGIEsNHfRsd3hPdSeRgoXen8fSEZ2jlp6qErI9OV/3xFkVrk8X0Zt/+ensBBnpc32LNIQCNUqMr0hzBH9mfppnViM2njuF0bHo6teibNK0ujYymPpE69Dq4pKTJYjzcC1OL6jGQ9OrBflyZwjg6sXQDpX+cPPQoxXmjst4lwITkHS+F0sd+qP9FQANZvnvIC/xPq08Q2Wvjtg60h4sbZYlkTDkZh0n1meRz3Ig1ee/qirG2f1/lWarE/4xo0bXcs4EiCHi2V0uUbauf9mvu1SdjulzdKF8WcOJ/upPZ9qnHqjFojRFtRY/sNbphPOIpgu4On5cd9Yjx+/OYAkKK9+FMt943N5X23mfNICg1cZoDZfN2EJ6RfYCw87M9FG6m8BoiOTjme4SL/CBZWkXGzRYL0k12ho2KEPv9juxaxnrpqTQ+W/RTv8DkflmahHLLJhpPNSxS4oLwoTZIAs6hDEqOKCkH5tl5eBvlmpkLckZRqp4oLkwI9j0XBJwoofa2ZromNdf8vF6ephDpf7/LnPCyETC0=
+        on:
+          all_branches: true
+
+    - stage: deploy
+      if: branch = master
+      deploy:
+        provider: firebase
+        project: phigasuicom
+        token:
+          secure: Yn7cHY8csRWyhcSzI32AzjOhuEEneloOlhD4YVYiXnxVZNuiy9AvIkYi9i7lYQ2L7HQuHHw8HZNyld3AySg3RSC2Jm197J4wSV0D7L6y7vex7ZUtpUgWEvNrIgInnP6jk6xQFJ9ZfrrUj3//uNv0kT8wESKyLEXdc2+tz69nbi3ZOMhVSnsdQoUwGXzyIkMYSNzGeF2raHAdoDdZR8TeKkSUq3RjlRu/lNitJI7pNQ0ZN/lntbIO1RXDSJJ4uFZTZ0uWbFXKxHhUuIUiFzt4ORe+9JvOQWDLgsh8AQuz/RqRoyeLvvtTpdUn+2VnP3lXJsplPyDziSG7tBSLdu6sPdn1RU0VckYZlD3bqlcElHuq7FetHMo0/MsZAim9vjCBGgJMLwnrRQl5BSA4n4MnHJvpx88vOwb1NCnbMaAksnehrOcz2Rsw2CLgay9DLJ1YiUqGHFGxGwJSYzKLNp5T6g9zXFvMdsvOjqJwvlwqRtN6/mZ9G/7c/sEs0Fylq031m+4MaPgxh/5SP+ZN+iQQJUKt+NjPCchcejm7hOWLuCD3Ss5LH82YfQLy3hUzZXpbeOe9H3Sfjo7SkSM0HWQ6GCFHgSBNMCyhC9ggrkUPCYjIviu/QcpFp988iWxOA4+XzZf5n4uWkS/jmRgt0Ezb0duk/1phEZoFKQ6T1x9YdKE=
