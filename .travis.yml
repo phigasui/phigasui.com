@@ -9,7 +9,6 @@ script:
 jobs:
   include:
     - stage: test
-      if: branch != master
       deploy:
         provider: firebase
         project: test-phigasuicom
