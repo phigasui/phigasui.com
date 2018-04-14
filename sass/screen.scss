@@ -142,7 +142,7 @@ p {
 
 a {
   color: $base-text-color;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover {
     cursor: pointer;
