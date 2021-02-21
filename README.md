@@ -1,4 +1,4 @@
 # phigasui.com
-phigasui.com source
+Souce for phigasui.com
 
-on AWS S3, CloudFront
+Running on [Vercel](https://vercel.com)
