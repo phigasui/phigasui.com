@@ -30,6 +30,11 @@ const HomePage = () => {
             GALLERY
           </Link>
         </li>
+        <li>
+          <Link href="/editor">
+            EDITOR
+          </Link>
+        </li>
       </ul>
     </div>
   )
