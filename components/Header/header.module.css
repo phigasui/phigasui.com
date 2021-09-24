@@ -32,7 +32,7 @@
 }
 
 .menu_item:not(:first-child) {
-    margin-left: 32px;
+    margin-left: 16px;
 }
 
 .selected {
@@ -60,8 +60,7 @@
     }
 
     .menu_item {
-        text-align: center;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .menu_item:not(:first-child) {

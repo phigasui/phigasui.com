@@ -1,13 +1,13 @@
 import styles from './sounds.module.css'
 import { ContentLayout } from '../components/Layouts/ContentLayout'
 
+const trackIds = [241113779, 94333477, 92816817]
+
 const Sounds = () => {
   return (
     <ContentLayout>
       <div className={styles.sounds}>
-        <SoundCloudContent trackId={241113779} />
-        <SoundCloudContent trackId={94333477} />
-        <SoundCloudContent trackId={92816817} />
+        {trackIds.map(trackId => <SoundCloudContent trackId={trackId} />)}
       </div>
     </ContentLayout>
   )
