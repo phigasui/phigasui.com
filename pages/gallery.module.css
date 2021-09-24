@@ -9,3 +9,10 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (max-width: 1200px) {
+    .gallery_item {
+        width: 50px;
+        font-size: 8px;
+    }
+}

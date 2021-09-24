@@ -30,3 +30,36 @@
 .image {
     width: 150px;
 }
+
+
+@media (max-width: 1200px) {
+    .image {
+        width: 100px;
+    }
+
+    .card {
+        display: block;
+    }
+
+    .title {
+        width: auto;
+        font-size: 32px;
+        line-height: 25px;
+        margin-top: 20px;
+    }
+
+    .top {
+        margin-left: 20px;
+    }
+
+    .menu {
+        display: block;
+        font-family: 'Concert One', cursive;
+        margin-top: 30px;
+    }
+
+    .menu_item {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
