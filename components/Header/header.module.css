@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 50px;
+}
+
+.title {
+    font-family: 'Concert One', cursive;
+    font-size: 36px;
+    line-height: 28px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu_item {
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-size: 32px;
+}
+
+.menu_item:not(:first-child) {
+    margin-left: 32px;
+}
+
+.selected {
+    color: #E7DEFF;
+}

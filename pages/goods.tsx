@@ -1,7 +1,8 @@
+import { ContentLayout } from '../components/Layouts/ContentLayout'  
+
 const Goods = () => {
   return (
-    <div>
-      <h1>GOODS</h1>
+    <ContentLayout>
       <div>
         欲しい方はTwitter等各種SNSから連絡ください。パーカーは2,500yenくらい。Tシャツ1,500yenくらい。ステッカーはfreeで配ってます。
 
@@ -10,7 +11,7 @@ const Goods = () => {
         その他、SUZURIでもグッズを販売しております。
         <a href="https://suzuri.jp/phigasui">SUZURI</a>
       </div>
-    </div>
+    </ContentLayout>
   )
 }
 

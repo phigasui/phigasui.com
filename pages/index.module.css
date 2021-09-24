@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.top {
+    margin-left: 40px;
+}
+
+.title {
+    font-family: 'Concert One', cursive;
+    font-size: 96px;
+    line-height: 75px;
+}
+
+.menu {
+    display: flex;
+    margin-top: 48px;
+}
+
+.menu_item {
+    font-family: 'Concert One', cursive;
+    font-size: 32px;
+}
+
+.menu_item:not(:first-child) {
+    margin-left: 10px;
+}
+
+.image {
+    width: 150px;
+}
