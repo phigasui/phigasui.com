@@ -2,26 +2,23 @@ import Image from 'next/image'
 import styles from './gallery.module.css'
 import { ContentLayout } from '../components/Layouts/ContentLayout'
 
+const images = [
+  { path: '/images/alpagasui.png', name: 'alpagasui' },
+  { path: '/images/GASHIMETAL.png', name: 'GASHIMETAL' },
+  { path: '/images/samuragasui.png', name: 'samuragasui' },
+  { path: '/images/ramengasui.jpg', name: 'ramengasui' },
+]
+
 const Gallery = () => {
   return (
     <ContentLayout>
       <div className={styles.gallery}>
-        <div className={styles.gallery_item}>
-          <Image src="/images/alpagasui.png" width="150" height="150"/>
-          <span>alpagasui</span>
-        </div>
-        <div className={styles.gallery_item}>
-          <Image src="/images/GASHIMETAL.png" width="150" height="150"/>
-          <span>GASHIMETAL</span>
-        </div>
-        <div className={styles.gallery_item}>
-          <Image src="/images/samuragasui.png" width="150" height="150"/>
-          <span>samuragasui</span>
-        </div>
-        <div className={styles.gallery_item}>
-          <Image src="/images/ramengasui.jpg" width="150" height="150"/>
-          <span>ramengasui</span>
-        </div>
+        {images.map(image => (
+          <div className={styles.gallery_item}>
+            <Image src={image.path} width="100%" height="100%"/>
+            <span>{image.name}</span>
+          </div>
+        ))}
       </div>
     </ContentLayout>
   )

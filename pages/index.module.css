@@ -34,7 +34,8 @@
 
 @media (max-width: 1200px) {
     .image {
-        width: 100px;
+        width: 64px;
+        margin-left: -8px;
     }
 
     .card {
@@ -49,17 +50,22 @@
     }
 
     .top {
-        margin-left: 20px;
+        margin-left: 0;
     }
 
     .menu {
         display: block;
-        font-family: 'Concert One', cursive;
         margin-top: 30px;
     }
 
     .menu_item {
-        margin-left: 0;
+        font-family: 'Concert One', cursive;
+        font-size: 24px;
         margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .menu_item:not(:first-child) {
+        margin-left: 0;
     }
 }
