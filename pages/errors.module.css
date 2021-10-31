@@ -1,0 +1,14 @@
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 50px;
+}
+
+.title {
+    font-family: 'Concert One', cursive;
+    font-size: 36px;
+    line-height: 28px;
+}
