@@ -8,6 +8,8 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
+        <title>phigasui.com</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64248664-1"></script>
         <script
           dangerouslySetInnerHTML={{
