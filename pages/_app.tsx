@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               gtag('js', new Date());
 
               gtag('config', 'UA-64248664-1');
-	    `
+            `
           }}>
         </script>
 

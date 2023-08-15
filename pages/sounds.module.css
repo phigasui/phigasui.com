@@ -1,10 +1,10 @@
 .sounds {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .sounds_item {
-    margin: 10px;
     width: 450px;
     height: 100px;
 }

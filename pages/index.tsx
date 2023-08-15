@@ -37,6 +37,11 @@ const HomePage = () => {
               GALLERY
             </Link>
           </li>
+          <li className={styles.menu_item}>
+            <Link href="https://blog.phigasui.com">
+              BLOG
+            </Link>
+          </li>
         </ul>
       </div>
     </Card>

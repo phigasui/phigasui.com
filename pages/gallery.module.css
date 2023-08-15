@@ -1,21 +1,23 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-top: -12px;
+    gap: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
 }
 
 .gallery_item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 12px;
-    margin-top: 12px;
 }
 
 @media (max-width: 1200px) {
     .gallery_item {
-        width: 77px;
+        width: 88px;
         font-size: 8px;
     }
 }
