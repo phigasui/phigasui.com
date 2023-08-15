@@ -15,7 +15,12 @@ const Gallery = () => {
       <div className={styles.gallery}>
         {images.map(image => (
           <div className={styles.gallery_item}>
-            <Image src={image.path} width="100%" height="100%"/>
+            <Image
+              src={image.path}
+              width={150}
+              height={150}
+              alt={`Illust of ${image.name}`}
+            />
             <span>{image.name}</span>
           </div>
         ))}
