@@ -11,11 +11,9 @@ export const Header = () => {
 
   return (
     <div className={styles.header}>
-      <Link href="/">
-        <a className={styles.top}>
-          <img className={styles.image} src="/images/alpagasui.png"/>
-          <span className={styles.title}>phigasui.com</span>
-        </a>
+      <Link href="/" className={styles.top}>
+        <img className={styles.image} src="/images/alpagasui.png"/>
+        <span className={styles.title}>phigasui.com</span>
       </Link>
 
       <ul className={styles.menu}>
@@ -42,6 +40,11 @@ export const Header = () => {
         <li className={menuItemClass(router, '/gallery')}>
           <Link href="/gallery">
             GALLERY
+          </Link>
+        </li>
+        <li className={menuItemClass(router, 'blog')}>
+          <Link href="https://blog.phigasui.com">
+            BLOG
           </Link>
         </li>
       </ul>
