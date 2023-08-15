@@ -4,11 +4,10 @@
 }
 
 .image {
-    width: 50px;
+    width: 48px;
 }
 
 .title {
     font-family: 'Concert One', cursive;
     font-size: 36px;
-    line-height: 28px;
 }
