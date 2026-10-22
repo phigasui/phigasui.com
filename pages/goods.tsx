@@ -2,7 +2,7 @@ import { ContentLayout } from '../components/Layouts/ContentLayout'
 
 const Goods = () => {
   return (
-    <ContentLayout>
+    <ContentLayout title="Goods">
       <p>
         欲しい方はTwitter等各種SNSから連絡ください。パーカーは2,500yenくらい。Tシャツ1,500yenくらい。ステッカーはfreeで配ってます。
         <br/>

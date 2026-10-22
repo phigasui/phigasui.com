@@ -2,7 +2,7 @@ import { ContentLayout } from '../components/Layouts/ContentLayout'
 
 const Accounts = () => {
   return (
-    <ContentLayout>
+    <ContentLayout title="Accounts">
       <div>
         <p><a href="https://twitter.com/phigasui">Twitter</a></p>
         <p><a href="https://instagram.com/phigasui">Instagram</a></p>
