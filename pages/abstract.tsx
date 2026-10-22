@@ -2,7 +2,7 @@ import { ContentLayout } from '../components/Layouts/ContentLayout'
 
 const Abstract = () => {
   return (
-    <ContentLayout>
+    <ContentLayout title="Abstract">
       <p>
         phigasui (<a href="https://www.deepl.com/ja/translator#es/ja/phigasui">fəgəsui</a>)
       </p>

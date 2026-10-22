@@ -2,10 +2,13 @@ import Link from 'next/link'
 import styles from './index.module.css'
 
 import { Card } from '../components/Card/Card'
+import { SEO } from '../components/SEO/SEO'
 
 const HomePage = () => {
   return (
-    <Card className={styles.card}>
+    <>
+      <SEO />
+      <Card className={styles.card}>
       <div>
         <img className={styles.image} src="/images/alpagasui.png"/>
       </div>
@@ -45,6 +48,7 @@ const HomePage = () => {
         </ul>
       </div>
     </Card>
+    </>
   )
 }
 
