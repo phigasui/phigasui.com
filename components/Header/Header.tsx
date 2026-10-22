@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './header.module.css'
 import { useRouter } from 'next/router'
 
@@ -12,7 +13,13 @@ export const Header = () => {
   return (
     <div className={styles.header}>
       <Link href="/" className={styles.top}>
-        <img className={styles.image} src="/images/alpagasui.png"/>
+        <Image
+          className={styles.image}
+          src="/images/alpagasui.png"
+          alt="alpagasui"
+          width={50}
+          height={50}
+        />
         <span className={styles.title}>phigasui.com</span>
       </Link>
 
