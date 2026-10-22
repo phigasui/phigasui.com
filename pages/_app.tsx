@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           }}>
         </script>
 
-        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-WZRRPSS"></script>
+        <script async src="https://www.googleoptimize.com/optimize.js?id=OPT-WZRRPSS"></script>
       </Head>
       <Component {...pageProps} />
     </>

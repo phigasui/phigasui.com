@@ -14,7 +14,7 @@ const Gallery = () => {
     <ContentLayout>
       <div className={styles.gallery}>
         {images.map(image => (
-          <div className={styles.gallery_item}>
+          <div key={image.name} className={styles.gallery_item}>
             <Image
               src={image.path}
               width={150}

@@ -7,7 +7,7 @@ const Sounds = () => {
   return (
     <ContentLayout>
       <div className={styles.sounds}>
-        {trackIds.map(trackId => <SoundCloudContent trackId={trackId} />)}
+        {trackIds.map(trackId => <SoundCloudContent key={trackId} trackId={trackId} />)}
       </div>
     </ContentLayout>
   )
