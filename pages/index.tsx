@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './index.module.css'
 
 import { Card } from '../components/Card/Card'
@@ -10,7 +11,14 @@ const HomePage = () => {
       <SEO />
       <Card className={styles.card}>
       <div>
-        <img className={styles.image} src="/images/alpagasui.png"/>
+        <Image
+          className={styles.image}
+          src="/images/alpagasui.png"
+          alt="alpagasui"
+          width={160}
+          height={160}
+          priority
+        />
       </div>
       <div className={styles.top}>
         <h1 className={styles.title}>phigasui.com</h1>
