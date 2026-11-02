@@ -5,7 +5,7 @@ import { SEO } from '../components/SEO/SEO'
 
 const Custom404 = () => (
   <>
-    <SEO title="404 Not Found" />
+    <SEO title="404 Not Found" noindex />
     <Link href="/" className={styles.top}>
       <Image
         className={styles.image}
