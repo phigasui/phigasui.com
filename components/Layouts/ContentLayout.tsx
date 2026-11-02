@@ -11,7 +11,7 @@ interface Props {
 
 export const ContentLayout = ({ title, description, children }: Props) => (
   <Card>
-    {title && <SEO title={title} description={description} />}
+    <SEO title={title} description={description} />
     <Header />
     {children}
   </Card>
