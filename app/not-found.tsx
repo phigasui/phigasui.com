@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './errors.module.css'
-import { SEO } from '../components/SEO/SEO'
+import { pageMetadata } from '../lib/metadata'
+
+export const metadata = pageMetadata({ title: '404 Not Found' })
 
 const Custom404 = () => (
   <>
-    <SEO title="404 Not Found" />
     <Link href="/" className={styles.top}>
       <Image
         className={styles.image}

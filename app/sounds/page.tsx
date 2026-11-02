@@ -1,11 +1,14 @@
 import styles from './sounds.module.css'
-import { ContentLayout } from '../components/Layouts/ContentLayout'
+import { ContentLayout } from '../../components/Layouts/ContentLayout'
+import { pageMetadata } from '../../lib/metadata'
+
+export const metadata = pageMetadata({ title: 'Sounds' })
 
 const trackIds = [241113779, 94333477, 92816817]
 
 const Sounds = () => {
   return (
-    <ContentLayout title="Sounds">
+    <ContentLayout>
       <div className={styles.sounds}>
         {trackIds.map(trackId => <SoundCloudContent key={trackId} trackId={trackId} />)}
       </div>

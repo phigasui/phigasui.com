@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import styles from './gallery.module.css'
-import { ContentLayout } from '../components/Layouts/ContentLayout'
+import { ContentLayout } from '../../components/Layouts/ContentLayout'
+import { pageMetadata } from '../../lib/metadata'
+
+export const metadata = pageMetadata({ title: 'Gallery' })
 
 const images = [
   { path: '/images/alpagasui.png', name: 'alpagasui' },
@@ -11,7 +14,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <ContentLayout title="Gallery">
+    <ContentLayout>
       <div className={styles.gallery}>
         {images.map(image => (
           <div key={image.name} className={styles.gallery_item}>

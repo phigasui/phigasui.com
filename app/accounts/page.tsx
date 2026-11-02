@@ -1,8 +1,11 @@
-import { ContentLayout } from '../components/Layouts/ContentLayout'
+import { ContentLayout } from '../../components/Layouts/ContentLayout'
+import { pageMetadata } from '../../lib/metadata'
+
+export const metadata = pageMetadata({ title: 'Accounts' })
 
 const Accounts = () => {
   return (
-    <ContentLayout title="Accounts">
+    <ContentLayout>
       <div>
         <p><a href="https://twitter.com/phigasui">Twitter</a></p>
         <p><a href="https://instagram.com/phigasui">Instagram</a></p>
