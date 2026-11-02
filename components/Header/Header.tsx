@@ -10,7 +10,7 @@ const menuItemClass = (pathname: string, path: string) => {
 }
 
 export const Header = () => {
-  const pathname = usePathname() ?? ''
+  const pathname = usePathname()
 
   return (
     <div className={styles.header}>
