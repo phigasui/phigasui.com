@@ -1,8 +1,11 @@
-import { ContentLayout } from '../components/Layouts/ContentLayout'
+import { ContentLayout } from '../../components/Layouts/ContentLayout'
+import { pageMetadata } from '../../lib/metadata'
+
+export const metadata = pageMetadata({ title: 'Abstract' })
 
 const Abstract = () => {
   return (
-    <ContentLayout title="Abstract">
+    <ContentLayout>
       <p>
         phigasui (<a href="https://www.deepl.com/ja/translator#es/ja/phigasui">fəgəsui</a>)
       </p>

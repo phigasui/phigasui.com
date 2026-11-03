@@ -3,12 +3,13 @@ import Image from 'next/image'
 import styles from './index.module.css'
 
 import { Card } from '../components/Card/Card'
-import { SEO } from '../components/SEO/SEO'
+import { pageMetadata } from '../lib/metadata'
+
+export const metadata = pageMetadata()
 
 const HomePage = () => {
   return (
     <>
-      <SEO />
       <Card className={styles.card}>
       <div>
         <Image

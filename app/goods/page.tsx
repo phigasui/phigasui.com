@@ -1,8 +1,11 @@
-import { ContentLayout } from '../components/Layouts/ContentLayout'  
+import { ContentLayout } from '../../components/Layouts/ContentLayout'
+import { pageMetadata } from '../../lib/metadata'
+
+export const metadata = pageMetadata({ title: 'Goods' })
 
 const Goods = () => {
   return (
-    <ContentLayout title="Goods">
+    <ContentLayout>
       <p>
         欲しい方はTwitter等各種SNSから連絡ください。パーカーは2,500yenくらい。Tシャツ1,500yenくらい。ステッカーはfreeで配ってます。
         <br/>
